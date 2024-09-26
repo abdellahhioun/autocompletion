@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Moteur de recherche</title>
-    <script src="autocompletion.js"></script>
-    <style>
-        #suggestions {
-            border: 1px solid #ccc;
-            max-height: 150px;
-            overflow-y: auto;
-            display: none;
-        }
-        .suggestion {
-            padding: 8px;
-            cursor: pointer;
-        }
-        .suggestion:hover {
-            background-color: #f0f0f0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Engine</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <form action="recherche.php" method="GET">
-            <input type="text" id="search" name="search" placeholder="Rechercher...">
-            <div id="suggestions"></div>
-        </form>
-    </header>
-    <h1>Bienvenue sur le moteur de recherche d'animaux</h1>
-    <!-- ... contenu de la page d'accueil ... -->
+  <header>
+    <h1>Search Engine</h1>
+    <form action="recherche.php" method="GET">
+      <input type="text" id="search-input" name="search" placeholder="Search..." autocomplete="off">
+      <div id="autocomplete-list"></div>
+    </form>
+  </header>
+
+  <script src="js/autocomplete.js"></script>
 </body>
 </html>
